@@ -50,7 +50,7 @@ namespace OwSniff
             string packetData = Encoding.UTF8.GetString(packet.Packet.Data);
 
             /* If the packet contains a compressed demo file */
-            if (packetData.Contains(".dem.bz2"))
+            if (packetData.Contains(".valve.net") && packetData.Contains("/730/") && packetData.Contains(".dem.bz2"))
             {
                 /* Declare variables to store the domain and file URL */
                 string file = String.Empty;
